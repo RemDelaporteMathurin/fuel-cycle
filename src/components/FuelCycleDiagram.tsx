@@ -41,7 +41,7 @@ export function FuelCycleDiagram({ activeState }: Props) {
   }
 
   return (
-    <svg viewBox="0 0 1100 650" width={1100} height={650} xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 1100 650" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       {/* Defs */}
       <defs>
         <radialGradient id="plasma-gradient" cx="50%" cy="50%" r="50%">

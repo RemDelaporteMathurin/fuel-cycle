@@ -28,7 +28,7 @@ export default function App() {
   }, [])
 
   return (
-    <div style={{ position: 'relative', width: 1100, height: 650 }}>
+    <div style={{ position: 'relative', width: '100%', maxWidth: 1100, aspectRatio: '1100 / 650', margin: '0 auto' }}>
       <FuelCycleDiagram activeState={activeState} />
       <Controls active={activeState} onChange={setActiveState} />
     </div>

@@ -21,6 +21,10 @@ export function Controls({ active, onChange }: Props) {
       transform: 'translateX(-50%)',
       display: 'flex',
       gap: 10,
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+      width: 'max-content',
+      maxWidth: 'calc(100% - 20px)'
     }}>
       <button
         onClick={() => handleClick('all')}
