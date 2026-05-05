@@ -37,7 +37,8 @@ export const particles: ParticleDef[] = [
   { pathId: 'plasma-exhaust', species: 'impurity', duration: 3, delay: 1.2, size: 2.5 },
 
   // IFC: Exhaust to Fuel Cleanup
-  { pathId: 'exhaust-cleanup', species: 'tritium', duration: 1.5, size: 3 },
+  { pathId: 'exhaust-cleanup', species: 'deuterium', duration: 1.5, size: 3 },
+  { pathId: 'exhaust-cleanup', species: 'tritium', duration: 1.5, size: 3, delay: 0.25 },
   { pathId: 'exhaust-cleanup', species: 'impurity', duration: 1.5, delay: 0.5, size: 2.5 },
 
   // IFC: Fuel Cleanup to ISS
@@ -45,8 +46,8 @@ export const particles: ParticleDef[] = [
   { pathId: 'cleanup-iss', species: 'deuterium', duration: 2.5, delay: 0.8, size: 3 },
 
   // IFC: ISS to Storage
-  { pathId: 'iss-storage-t', species: 'tritium', duration: 2.5, size: 3.5 },
-  { pathId: 'iss-storage-d', species: 'deuterium', duration: 2.5, size: 3.5 },
+  { pathId: 'iss-storage-t', species: 'tritium', duration: 2.1, size: 3.5 },
+  { pathId: 'iss-storage-d', species: 'deuterium', duration: 2.1, size: 3.5 },
 
   // DIR
   { pathId: 'dir', species: 'tritium', duration: 2, size: 3, opacity: 1 },
