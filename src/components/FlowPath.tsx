@@ -1,4 +1,4 @@
-import { FlowPathDef } from '../types'
+import type { FlowPathDef } from '../types'
 
 const cycleStrokes: Record<string, string> = {
   ofc: '#4ecdc4',

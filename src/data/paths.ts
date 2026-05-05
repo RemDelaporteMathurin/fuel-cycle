@@ -6,8 +6,8 @@ export const flowPaths: FlowPathDef[] = [
     id: 'blanket-tes',
     d: 'M 200 245 C 200 180, 280 105, 310 105',
     cycle: 'ofc',
-    label: 'T in salt',
-    labelPos: { x: 230, y: 170 },
+    label: 'T in breeder',
+    labelPos: { x: 240, y: 170 },
   },
   {
     id: 'tes-hx',
@@ -43,7 +43,7 @@ export const flowPaths: FlowPathDef[] = [
     d: 'M 820 95 L 900 95',
     cycle: 'hx-secondary',
     label: 'to Power Cycle',
-    labelPos: { x: 830, y: 85 },
+    labelPos: { x: 902, y: 98 },
   },
 
   // IFC
@@ -64,7 +64,7 @@ export const flowPaths: FlowPathDef[] = [
     d: 'M 245 430 C 300 465, 380 495, 420 515',
     cycle: 'ifc',
     label: 'D, T, imp.',
-    labelPos: { x: 290, y: 485 },
+    labelPos: { x: 300, y: 490 },
   },
   {
     id: 'exhaust-cleanup',

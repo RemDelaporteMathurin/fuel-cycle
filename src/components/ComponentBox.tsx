@@ -1,9 +1,9 @@
-import { ComponentDef } from '../types'
+import type { ComponentDef } from '../types'
 
 const cycleColors: Record<string, { fill: string; stroke: string }> = {
   ofc: { fill: '#264653', stroke: '#1a3540' },
   ifc: { fill: '#555', stroke: '#333' },
-  'hx-secondary': { fill: '#7c4dff', stroke: '#5a2dcc' },
+  'hx-secondary': { fill: '#264653', stroke: '#1a3540' },
 }
 
 interface Props {

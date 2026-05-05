@@ -4,8 +4,8 @@ export const highlights: HighlightDef[] = [
   {
     id: 'breeding',
     label: 'Breeding',
-    activeComponents: ['tes'],
-    activePaths: ['blanket-tes'],
+    activeComponents: [],
+    activePaths: [],
   },
   {
     id: 'extraction',

@@ -65,7 +65,7 @@ export function FuelCycleDiagram({ activeState }: Props) {
       </defs>
 
       {/* Zone backgrounds */}
-      <rect x={60} y={15} width={780} height={200} rx={12} ry={12}
+      <rect x={60} y={15} width={840} height={200} rx={12} ry={12}
         fill="rgba(38, 70, 83, 0.04)" stroke="rgba(38, 70, 83, 0.15)"
         strokeWidth={1} strokeDasharray="6 3" />
       <text x={75} y={35} fontSize={11} fontWeight={700} letterSpacing={1} fill="#264653" opacity={0.6}>
@@ -75,7 +75,7 @@ export function FuelCycleDiagram({ activeState }: Props) {
       <rect x={390} y={225} width={500} height={395} rx={12} ry={12}
         fill="rgba(85, 85, 85, 0.03)" stroke="rgba(85, 85, 85, 0.12)"
         strokeWidth={1} strokeDasharray="6 3" />
-      <text x={405} y={245} fontSize={11} fontWeight={700} letterSpacing={1} fill="#555" opacity={0.6}>
+      <text x={755} y={245} fontSize={11} fontWeight={700} letterSpacing={1} fill="#555" opacity={0.6}>
         INNER FUEL CYCLE
       </text>
 
@@ -86,13 +86,6 @@ export function FuelCycleDiagram({ activeState }: Props) {
       }}>
         <Device />
       </g>
-
-      {/* HX divider (tube wall between primary and secondary) */}
-      <line x1={660} y1={75} x2={660} y2={115}
-        stroke="#999" strokeWidth={1.5} strokeDasharray="3 2" />
-      <text x={655} y={130} fontSize={8} fill="#999" fontStyle="italic" textAnchor="middle">
-        tube wall
-      </text>
 
       {/* Flow paths */}
       {flowPaths.map(path => (

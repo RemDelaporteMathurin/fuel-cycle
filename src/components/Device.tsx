@@ -12,9 +12,9 @@ export function Device() {
       <text x={200} y={290} textAnchor="middle" fontSize={9} fontWeight={600} fill="#264653">
         BLANKET
       </text>
-      <text x={200} y={305} textAnchor="middle" fontSize={8} fill="#264653">
+      {/* <text x={200} y={305} textAnchor="middle" fontSize={8} fill="#264653">
         (FLiBe/FLiNaK)
-      </text>
+      </text> */}
     </g>
   )
 }
