@@ -1,4 +1,4 @@
-import { ComponentDef } from '../types'
+import type { ComponentDef } from '../types'
 
 export const components: ComponentDef[] = [
   // OFC
@@ -11,13 +11,13 @@ export const components: ComponentDef[] = [
   {
     id: 'hx-primary',
     label: ['Heat Exchanger', '(primary - salt)'],
-    x: 540, y: 70, width: 140, height: 40,
+    x: 520, y: 70, width: 140, height: 50,
     cycle: 'ofc',
   },
   {
     id: 'hx-secondary',
     label: ['Secondary Coolant', '(water / He)'],
-    x: 540, y: 120, width: 140, height: 40,
+    x: 730, y: 70, width: 140, height: 50,
     cycle: 'hx-secondary',
   },
 
@@ -51,13 +51,5 @@ export const components: ComponentDef[] = [
     label: ['Isotope Separation', 'System (ISS)'],
     x: 700, y: 370, width: 150, height: 45,
     cycle: 'ifc',
-  },
-
-  // Recovery
-  {
-    id: 'recovery',
-    label: ['Recover Trace', 'Tritium'],
-    x: 900, y: 180, width: 140, height: 45,
-    cycle: 'recovery',
   },
 ]

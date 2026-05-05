@@ -1,4 +1,4 @@
-import { FlowPathDef } from '../types'
+import type { FlowPathDef } from '../types'
 
 export const flowPaths: FlowPathDef[] = [
   // OFC
@@ -11,14 +11,12 @@ export const flowPaths: FlowPathDef[] = [
   },
   {
     id: 'tes-hx',
-    d: 'M 460 95 L 540 90',
+    d: 'M 460 95 L 520 95',
     cycle: 'ofc',
-    label: 'salt (T extracted)',
-    labelPos: { x: 465, y: 78 },
   },
   {
     id: 'hx-blanket',
-    d: 'M 610 110 C 610 180, 480 200, 350 220 C 280 230, 240 260, 220 280',
+    d: 'M 590 120 C 590 180, 480 200, 350 220 C 280 230, 240 260, 220 280',
     cycle: 'ofc',
   },
   {
@@ -28,44 +26,24 @@ export const flowPaths: FlowPathDef[] = [
     label: 'pure T',
     labelPos: { x: 420, y: 195 },
   },
-  {
-    id: 'neutron',
-    d: 'M 215 330 C 215 310, 210 295, 205 275',
-    cycle: 'ofc',
-    dashed: true,
-  },
 
-  // HX / Losses
+  // HX permeation (primary to secondary)
   {
     id: 'hx-permeation',
-    d: 'M 610 110 L 610 120',
-    cycle: 'recovery',
+    d: 'M 660 95 L 730 95',
+    cycle: 'ofc',
     dashed: true,
+    label: 'permeation',
+    labelPos: { x: 662, y: 85 },
   },
+
+  // Secondary coolant out
   {
     id: 'secondary-power',
-    d: 'M 680 140 L 900 140',
+    d: 'M 820 95 L 900 95',
     cycle: 'hx-secondary',
     label: 'to Power Cycle',
-    labelPos: { x: 750, y: 132 },
-  },
-  {
-    id: 'fw-permeation',
-    d: 'M 335 355 C 520 330, 720 260, 900 205',
-    cycle: 'recovery',
-    dashed: true,
-    label: 'FW permeation',
-    labelPos: { x: 570, y: 305 },
-  },
-  {
-    id: 'recovery-iss',
-    d: 'M 940 225 C 900 300, 860 355, 840 370',
-    cycle: 'recovery',
-  },
-  {
-    id: 'recovery-out',
-    d: 'M 1040 202 L 1080 202',
-    cycle: 'recovery',
+    labelPos: { x: 830, y: 85 },
   },
 
   // IFC

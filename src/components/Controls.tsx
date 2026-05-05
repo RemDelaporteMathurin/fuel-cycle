@@ -1,4 +1,4 @@
-import { HighlightState } from '../types'
+import type { HighlightState } from '../types'
 import { highlights } from '../data/highlights'
 
 interface Props {
@@ -7,6 +7,12 @@ interface Props {
 }
 
 export function Controls({ active, onChange }: Props) {
+  const handleClick = (state: HighlightState) => {
+    onChange(state)
+    // Update URL hash
+    window.history.replaceState(null, '', `#${state}`)
+  }
+
   return (
     <div style={{
       position: 'absolute',
@@ -17,7 +23,7 @@ export function Controls({ active, onChange }: Props) {
       gap: 10,
     }}>
       <button
-        onClick={() => onChange('all')}
+        onClick={() => handleClick('all')}
         style={{
           padding: '8px 16px',
           border: '2px solid #264653',
@@ -34,7 +40,7 @@ export function Controls({ active, onChange }: Props) {
       {highlights.map(h => (
         <button
           key={h.id}
-          onClick={() => onChange(h.id)}
+          onClick={() => handleClick(h.id)}
           style={{
             padding: '8px 16px',
             border: '2px solid #264653',

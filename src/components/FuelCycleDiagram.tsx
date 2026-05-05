@@ -1,4 +1,4 @@
-import { HighlightState } from '../types'
+import type { HighlightState } from '../types'
 import { components } from '../data/components'
 import { flowPaths } from '../data/paths'
 import { particles } from '../data/particles'
@@ -65,7 +65,7 @@ export function FuelCycleDiagram({ activeState }: Props) {
       </defs>
 
       {/* Zone backgrounds */}
-      <rect x={60} y={15} width={680} height={200} rx={12} ry={12}
+      <rect x={60} y={15} width={780} height={200} rx={12} ry={12}
         fill="rgba(38, 70, 83, 0.04)" stroke="rgba(38, 70, 83, 0.15)"
         strokeWidth={1} strokeDasharray="6 3" />
       <text x={75} y={35} fontSize={11} fontWeight={700} letterSpacing={1} fill="#264653" opacity={0.6}>
@@ -87,10 +87,12 @@ export function FuelCycleDiagram({ activeState }: Props) {
         <Device />
       </g>
 
-      {/* HX tube wall divider */}
-      <line x1={545} y1={110} x2={675} y2={110}
-        stroke="#999" strokeWidth={1} strokeDasharray="3 2" />
-      <text x={690} y={113} fontSize={8} fill="#999" fontStyle="italic">tube wall</text>
+      {/* HX divider (tube wall between primary and secondary) */}
+      <line x1={660} y1={75} x2={660} y2={115}
+        stroke="#999" strokeWidth={1.5} strokeDasharray="3 2" />
+      <text x={655} y={130} fontSize={8} fill="#999" fontStyle="italic" textAnchor="middle">
+        tube wall
+      </text>
 
       {/* Flow paths */}
       {flowPaths.map(path => (
@@ -121,33 +123,20 @@ export function FuelCycleDiagram({ activeState }: Props) {
         />
       ))}
 
-      {/* Loss output labels */}
-      <text x={1072} y={195} fontSize={8} fill="#e07020">Coolants</text>
-      <text x={1072} y={208} fontSize={8} fill="#e07020">Containment</text>
-      <text x={1072} y={221} fontSize={8} fill="#e07020">Building Air</text>
 
       {/* Legend */}
-      <rect x={15} y={545} width={210} height={95} rx={6} ry={6}
+      <rect x={15} y={560} width={160} height={75} rx={6} ry={6}
         fill="#fff" stroke="#ddd" strokeWidth={1} />
-      <text x={30} y={563} fontSize={10} fill="#333" fontWeight={700}>Particle Legend</text>
+      <text x={30} y={578} fontSize={10} fill="#333" fontWeight={700}>Particle Legend</text>
 
-      <circle cx={30} cy={580} r={4} fill="#00e5ff" />
-      <text x={42} y={584} fontSize={9} fill="#444">Tritium (T)</text>
+      <circle cx={30} cy={595} r={4} fill="#00e5ff" />
+      <text x={42} y={599} fontSize={9} fill="#444">Tritium (T)</text>
 
-      <circle cx={30} cy={598} r={4} fill="#E9A820" />
-      <text x={42} y={602} fontSize={9} fill="#444">Deuterium (D)</text>
+      <circle cx={30} cy={615} r={4} fill="#E9A820" />
+      <text x={42} y={619} fontSize={9} fill="#444">Deuterium (D)</text>
 
-      <circle cx={30} cy={616} r={4} fill="#ff4444" />
-      <text x={42} y={620} fontSize={9} fill="#444">Impurities</text>
-
-      <circle cx={125} cy={580} r={4} fill="#4CAF50" />
-      <text x={137} y={584} fontSize={9} fill="#444">Neutrons</text>
-
-      <circle cx={125} cy={598} r={4} fill="#264653" />
-      <text x={137} y={602} fontSize={9} fill="#444">Salt (FLiBe)</text>
-
-      <circle cx={125} cy={616} r={4} fill="#b388ff" />
-      <text x={137} y={620} fontSize={9} fill="#444">Sec. Coolant</text>
+      <circle cx={100} cy={595} r={4} fill="#ff4444" />
+      <text x={112} y={599} fontSize={9} fill="#444">Impurities</text>
     </svg>
   )
 }

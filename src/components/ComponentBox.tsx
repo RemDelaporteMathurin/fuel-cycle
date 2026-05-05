@@ -4,7 +4,6 @@ const cycleColors: Record<string, { fill: string; stroke: string }> = {
   ofc: { fill: '#264653', stroke: '#1a3540' },
   ifc: { fill: '#555', stroke: '#333' },
   'hx-secondary': { fill: '#7c4dff', stroke: '#5a2dcc' },
-  recovery: { fill: '#e07020', stroke: '#b85a18' },
 }
 
 interface Props {

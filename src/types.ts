@@ -1,6 +1,6 @@
 export type Cycle = 'ofc' | 'ifc' | 'recovery' | 'hx-secondary'
 
-export type Species = 'tritium' | 'deuterium' | 'impurity' | 'neutron' | 'salt' | 'coolant'
+export type Species = 'tritium' | 'deuterium' | 'impurity'
 
 export interface ComponentDef {
   id: string
@@ -30,7 +30,7 @@ export interface ParticleDef {
   opacity?: number
 }
 
-export type HighlightState = 'all' | 'breeding' | 'extraction' | 'hx' | 'diagnostics'
+export type HighlightState = 'all' | 'breeding' | 'extraction' | 'hx'
 
 export interface HighlightDef {
   id: HighlightState

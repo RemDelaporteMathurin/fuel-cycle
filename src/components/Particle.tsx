@@ -1,13 +1,10 @@
-import { ParticleDef, Species } from '../types'
+import type { ParticleDef, Species } from '../types'
 import { flowPaths } from '../data/paths'
 
 const speciesColors: Record<Species, string> = {
   tritium: '#00e5ff',
   deuterium: '#E9A820',
   impurity: '#ff4444',
-  neutron: '#4CAF50',
-  salt: '#264653',
-  coolant: '#b388ff',
 }
 
 interface Props {

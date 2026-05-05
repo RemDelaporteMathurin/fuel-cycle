@@ -3,20 +3,25 @@ import type { ParticleDef } from '../types'
 export const particles: ParticleDef[] = [
   // OFC: Blanket to TES
   { pathId: 'blanket-tes', species: 'tritium', duration: 3, size: 4 },
-  { pathId: 'blanket-tes', species: 'salt', duration: 3, delay: 1.2, size: 3.5 },
+  { pathId: 'blanket-tes', species: 'tritium', duration: 3, delay: 1.5, size: 3.5 },
 
   // OFC: TES to HX
-  { pathId: 'tes-hx', species: 'salt', duration: 2, size: 4 },
+  { pathId: 'tes-hx', species: 'tritium', duration: 2, size: 3, opacity: 0.5 },
 
   // OFC: HX back to Blanket
-  { pathId: 'hx-blanket', species: 'salt', duration: 4, size: 4 },
+  { pathId: 'hx-blanket', species: 'tritium', duration: 4, size: 3, opacity: 0.3 },
 
   // OFC: TES to Storage (pure T)
   { pathId: 'tes-storage', species: 'tritium', duration: 3, size: 4 },
 
-  // Neutrons
-  { pathId: 'neutron', species: 'neutron', duration: 1.5, size: 3 },
-  { pathId: 'neutron', species: 'neutron', duration: 1.5, delay: 0.7, size: 3 },
+  // HX permeation leak
+  { pathId: 'hx-permeation', species: 'tritium', duration: 1.5, size: 2, opacity: 0.6 },
+
+  // Secondary (trace T contamination)
+  { pathId: 'secondary-power', species: 'tritium', duration: 3, size: 2, opacity: 0.4 },
+
+  // FW permeation
+  { pathId: 'fw-permeation', species: 'tritium', duration: 5, size: 2, opacity: 0.5 },
 
   // IFC: Storage to Injection
   { pathId: 'storage-injection', species: 'tritium', duration: 2, size: 3 },
@@ -45,17 +50,4 @@ export const particles: ParticleDef[] = [
   // DIR
   { pathId: 'dir', species: 'tritium', duration: 2, size: 3, opacity: 0.7 },
   { pathId: 'dir', species: 'deuterium', duration: 2, delay: 0.7, size: 3, opacity: 0.7 },
-
-  // HX permeation leaks
-  { pathId: 'hx-permeation', species: 'tritium', duration: 1, size: 2, opacity: 0.6 },
-
-  // Secondary coolant
-  { pathId: 'secondary-power', species: 'coolant', duration: 3.5, size: 3.5 },
-  { pathId: 'secondary-power', species: 'tritium', duration: 3.5, delay: 1, size: 2, opacity: 0.5 },
-
-  // FW permeation
-  { pathId: 'fw-permeation', species: 'tritium', duration: 5, size: 2, opacity: 0.5 },
-
-  // Recovery to ISS
-  { pathId: 'recovery-iss', species: 'tritium', duration: 3.5, size: 2.5, opacity: 0.7 },
 ]
