@@ -4,10 +4,10 @@ export const flowPaths: FlowPathDef[] = [
   // OFC
   {
     id: 'blanket-tes',
-    d: 'M 200 245 C 200 180, 280 105, 310 105',
+    d: 'M 200 280 L 200 95 L 310 95',
     cycle: 'ofc',
     label: 'T in breeder',
-    labelPos: { x: 240, y: 170 },
+    labelPos: { x: 205, y: 170 },
   },
   {
     id: 'tes-hx',
@@ -16,14 +16,14 @@ export const flowPaths: FlowPathDef[] = [
   },
   {
     id: 'hx-blanket',
-    d: 'M 590 120 C 590 180, 480 200, 350 220 C 280 230, 240 260, 220 280',
+    d: 'M 590 80 L 590 55 L 175 55 L 175 280',
     cycle: 'ofc',
   },
   {
     id: 'tes-storage',
-    d: 'M 385 130 C 385 200, 490 240, 510 270',
+    d: 'M 385 120 L 385 200 L 550 200 L 550 270',
     cycle: 'ofc',
-    label: 'pure T',
+    label: 'extracted T',
     labelPos: { x: 420, y: 195 },
   },
 
@@ -34,14 +34,14 @@ export const flowPaths: FlowPathDef[] = [
     cycle: 'ofc',
     dashed: true,
     label: 'permeation',
-    labelPos: { x: 662, y: 85 },
+    labelPos: { x: 670, y: 85 },
   },
 
   // Secondary coolant out
   {
     id: 'secondary-power',
-    d: 'M 820 95 L 900 95',
-    cycle: 'hx-secondary',
+    d: 'M 870 95 L 900 95',
+    cycle: 'ofc',
     label: 'to Power Cycle',
     labelPos: { x: 902, y: 98 },
   },
@@ -49,43 +49,50 @@ export const flowPaths: FlowPathDef[] = [
   // IFC
   {
     id: 'storage-injection',
-    d: 'M 530 315 C 510 335, 500 345, 495 355',
+    d: 'M 530 315 L 495 355',
     cycle: 'ifc',
   },
   {
     id: 'injection-plasma',
-    d: 'M 420 375 C 370 375, 320 378, 270 380',
+    d: 'M 420 375 L 270 380',
     cycle: 'ifc',
     label: 'D, T',
     labelPos: { x: 340, y: 365 },
   },
   {
     id: 'plasma-exhaust',
-    d: 'M 245 430 C 300 465, 380 495, 420 515',
+    d: 'M 245 430 L 420 515',
     cycle: 'ifc',
     label: 'D, T, imp.',
     labelPos: { x: 300, y: 490 },
   },
   {
     id: 'exhaust-cleanup',
-    d: 'M 560 522 L 620 522',
+    d: 'M 560 522 L 650 522',
     cycle: 'ifc',
   },
   {
     id: 'cleanup-iss',
-    d: 'M 745 500 C 760 465, 770 435, 775 415',
+    d: 'M 730 500 L 730 415',
     cycle: 'ifc',
   },
   {
-    id: 'iss-storage',
-    d: 'M 720 375 C 680 345, 650 320, 620 310',
+    id: 'iss-storage-d',
+    d: 'M 710 375 L 710 305 L 630 305',
+    cycle: 'ifc',
+    label: 'D',
+    labelPos: { x: 700, y: 335 },
+  },
+  {
+    id: 'iss-storage-t',
+    d: 'M 730 375 L 730 285 L 630 285',
     cycle: 'ifc',
     label: 'T',
-    labelPos: { x: 660, y: 335 },
+    labelPos: { x: 735, y: 335 },
   },
   {
     id: 'dir',
-    d: 'M 470 500 C 465 460, 470 425, 480 395',
+    d: 'M 480 500 L 480 395',
     cycle: 'ifc',
     dashed: true,
     label: 'DIR',

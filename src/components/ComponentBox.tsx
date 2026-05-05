@@ -3,7 +3,6 @@ import type { ComponentDef } from '../types'
 const cycleColors: Record<string, { fill: string; stroke: string }> = {
   ofc: { fill: '#264653', stroke: '#1a3540' },
   ifc: { fill: '#555', stroke: '#333' },
-  'hx-secondary': { fill: '#264653', stroke: '#1a3540' },
 }
 
 interface Props {
@@ -28,9 +27,9 @@ export function ComponentBox({ def, isHighlighted, isDimmed }: Props) {
         rx={6}
         ry={6}
         fill={colors.fill}
-        stroke={isHighlighted ? '#E9A820' : colors.stroke}
+        stroke={isHighlighted ? '#2085e9' : colors.stroke}
         strokeWidth={isHighlighted ? 3 : 2}
-        filter={isHighlighted ? 'drop-shadow(0 0 6px rgba(233,168,32,0.6))' : 'none'}
+        filter={isHighlighted ? 'drop-shadow(0 0 6px #2085e9)' : 'none'}
       />
       {def.label.map((line, i) => (
         <text

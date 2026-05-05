@@ -6,10 +6,10 @@ export const particles: ParticleDef[] = [
   { pathId: 'blanket-tes', species: 'tritium', duration: 3, delay: 1.5, size: 3.5 },
 
   // OFC: TES to HX
-  { pathId: 'tes-hx', species: 'tritium', duration: 2, size: 3, opacity: 0.5 },
+  { pathId: 'tes-hx', species: 'tritium', duration: 2, size: 3, opacity: 0.7 },
 
   // OFC: HX back to Blanket
-  { pathId: 'hx-blanket', species: 'tritium', duration: 4, size: 3, opacity: 0.3 },
+  { pathId: 'hx-blanket', species: 'tritium', duration: 4, size: 3, opacity: 0.7 },
 
   // OFC: TES to Storage (pure T)
   { pathId: 'tes-storage', species: 'tritium', duration: 3, size: 4 },
@@ -45,9 +45,10 @@ export const particles: ParticleDef[] = [
   { pathId: 'cleanup-iss', species: 'deuterium', duration: 2.5, delay: 0.8, size: 3 },
 
   // IFC: ISS to Storage
-  { pathId: 'iss-storage', species: 'tritium', duration: 2.5, size: 3.5 },
+  { pathId: 'iss-storage-t', species: 'tritium', duration: 2.5, size: 3.5 },
+  { pathId: 'iss-storage-d', species: 'deuterium', duration: 2.5, size: 3.5 },
 
   // DIR
-  { pathId: 'dir', species: 'tritium', duration: 2, size: 3, opacity: 0.7 },
-  { pathId: 'dir', species: 'deuterium', duration: 2, delay: 0.7, size: 3, opacity: 0.7 },
+  { pathId: 'dir', species: 'tritium', duration: 2, size: 3, opacity: 1 },
+  { pathId: 'dir', species: 'deuterium', duration: 2, delay: 1, size: 3, opacity: 1 },
 ]

@@ -2,8 +2,8 @@ import type { ParticleDef, Species } from '../types'
 import { flowPaths } from '../data/paths'
 
 const speciesColors: Record<Species, string> = {
-  tritium: '#00e5ff',
-  deuterium: '#E9A820',
+  tritium: '#1a4848',
+  deuterium: '#f7b000',
   impurity: '#ff4444',
 }
 

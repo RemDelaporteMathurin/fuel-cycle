@@ -5,7 +5,7 @@ export const components: ComponentDef[] = [
   {
     id: 'tes',
     label: ['Tritium Extraction', 'System (TES)'],
-    x: 310, y: 80, width: 150, height: 50,
+    x: 310, y: 70, width: 150, height: 50,
     cycle: 'ofc',
   },
   {
@@ -18,7 +18,7 @@ export const components: ComponentDef[] = [
     id: 'hx-secondary',
     label: ['Secondary Coolant', '(water / He)'],
     x: 730, y: 70, width: 140, height: 50,
-    cycle: 'hx-secondary',
+    cycle: 'ofc',
   },
 
   // IFC
@@ -43,13 +43,13 @@ export const components: ComponentDef[] = [
   {
     id: 'fuel-cleanup',
     label: ['Fuel Cleanup'],
-    x: 620, y: 500, width: 150, height: 45,
+    x: 650, y: 500, width: 150, height: 45,
     cycle: 'ifc',
   },
   {
     id: 'iss',
     label: ['Isotope Separation', 'System (ISS)'],
-    x: 700, y: 370, width: 150, height: 45,
+    x: 650, y: 370, width: 150, height: 45,
     cycle: 'ifc',
   },
 ]

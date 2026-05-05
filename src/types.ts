@@ -1,4 +1,4 @@
-export type Cycle = 'ofc' | 'ifc' | 'recovery' | 'hx-secondary'
+export type Cycle = 'ofc' | 'ifc'
 
 export type Species = 'tritium' | 'deuterium' | 'impurity'
 

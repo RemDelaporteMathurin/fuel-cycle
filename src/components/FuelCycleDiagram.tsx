@@ -50,18 +50,6 @@ export function FuelCycleDiagram({ activeState }: Props) {
           <stop offset="100%" stopColor="#c2185b" />
         </radialGradient>
 
-        <marker id="arrow-ofc" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-          <polygon points="0,0 8,3 0,6" fill="#4ecdc4" />
-        </marker>
-        <marker id="arrow-ifc" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-          <polygon points="0,0 8,3 0,6" fill="#888" />
-        </marker>
-        <marker id="arrow-hx-secondary" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-          <polygon points="0,0 8,3 0,6" fill="#b388ff" />
-        </marker>
-        <marker id="arrow-recovery" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-          <polygon points="0,0 8,3 0,6" fill="#e07020" />
-        </marker>
       </defs>
 
       {/* Zone backgrounds */}
@@ -122,10 +110,10 @@ export function FuelCycleDiagram({ activeState }: Props) {
         fill="#fff" stroke="#ddd" strokeWidth={1} />
       <text x={30} y={578} fontSize={10} fill="#333" fontWeight={700}>Particle Legend</text>
 
-      <circle cx={30} cy={595} r={4} fill="#00e5ff" />
+      <circle cx={30} cy={595} r={4} fill="#1a4848" />
       <text x={42} y={599} fontSize={9} fill="#444">Tritium (T)</text>
 
-      <circle cx={30} cy={615} r={4} fill="#E9A820" />
+      <circle cx={30} cy={615} r={4} fill="#f7b000" />
       <text x={42} y={619} fontSize={9} fill="#444">Deuterium (D)</text>
 
       <circle cx={100} cy={595} r={4} fill="#ff4444" />

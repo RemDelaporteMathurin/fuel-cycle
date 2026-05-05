@@ -1,9 +1,8 @@
 import type { FlowPathDef } from '../types'
 
 const cycleStrokes: Record<string, string> = {
-  ofc: '#4ecdc4',
+  ofc: '#506385',
   ifc: '#888',
-  'hx-secondary': '#b388ff',
   recovery: '#e07020',
 }
 
@@ -14,7 +13,7 @@ interface Props {
 }
 
 export function FlowPath({ def, isHighlighted, isDimmed }: Props) {
-  const stroke = isHighlighted ? '#E9A820' : cycleStrokes[def.cycle]
+  const stroke = isHighlighted ? '#2085e9' : cycleStrokes[def.cycle]
 
   return (
     <g style={{
